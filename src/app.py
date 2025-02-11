@@ -31,6 +31,8 @@ def add_new_todo():
 
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
+   
+    todos.pop(position)
 
     return jsonify(todos)
 
